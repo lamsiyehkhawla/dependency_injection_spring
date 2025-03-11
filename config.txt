@@ -1,0 +1,2 @@
+net.lamsiyeh.dao.DaoImpl
+net.lamsiyeh.metier.MetierImpl
