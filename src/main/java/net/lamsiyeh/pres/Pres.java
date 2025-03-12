@@ -7,8 +7,8 @@ import net.lamsiyeh.metier.IMetierImpl;
 public class Pres {
     public static void main(String[] args) {
         DaoImpl dao = new DaoImpl();
-        IMetier metier= new IMetierImpl(dao);
-        //metier.setIdao(dao)
+        IMetierImpl metier= new IMetierImpl(dao);
+        //metier.setIdao(dao);// Injection des dependances via le setter
         System.out.println("RES"+metier.calcule());
     }
 }

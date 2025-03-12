@@ -3,7 +3,7 @@ package net.lamsiyeh.metier;
 import net.lamsiyeh.dao.IDao;
 
 public class IMetierImpl implements IMetier {
-    private IDao idao;//couplage faible
+    private IDao idao=null;//couplage faible
     @Override
     public double calcule() {
         double t = idao.getData();
