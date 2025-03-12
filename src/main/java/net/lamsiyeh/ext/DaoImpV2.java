@@ -6,6 +6,8 @@ import net.lamsiyeh.dao.IDao;
 public class DaoImpV2 implements IDao {
     @Override
     public double getData() {
-        return 0;
+        System.out.println("Version capteurs ....");
+        double t = 12;
+        return t;
     }
 }

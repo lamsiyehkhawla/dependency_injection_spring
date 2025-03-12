@@ -1,2 +1,2 @@
-net.lamsiyeh.dao.DaoImpl
+net.lamsiyeh.ext.DaoImpV2
 net.lamsiyeh.metier.MetierImpl
