@@ -1,5 +1,8 @@
 package net.lamsiyeh.dao;
 
+import org.springframework.stereotype.Component;
+
+@Component("d")
 public class DaoImpl implements IDao{
 
 

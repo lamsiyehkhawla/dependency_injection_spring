@@ -1,8 +1,14 @@
 package net.lamsiyeh.metier;
 
 import net.lamsiyeh.dao.IDao;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.stereotype.Component;
 
+@Component("metier")
 public class IMetierImpl implements IMetier {
+    @Autowired
+    @Qualifier("d2")
     private IDao idao=null;//couplage faible
     @Override
     public double calcule() {
