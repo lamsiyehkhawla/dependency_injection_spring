@@ -7,7 +7,6 @@ Ce projet illustre les concepts d'injection de dépendances en Java avec Spring.
 - **Injection par constructeur**
 - **Injection par setter**
 - **Injection avec Spring** (annotations et XML)
-- **Réflexion pour une instanciation dynamique des classes**
 
 ## Structure du projet
 
