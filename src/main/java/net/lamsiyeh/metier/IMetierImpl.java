@@ -7,8 +7,8 @@ import org.springframework.stereotype.Component;
 
 @Component("metier")
 public class IMetierImpl implements IMetier {
-    @Autowired
-    @Qualifier("d2")
+
+
     private IDao idao=null;//couplage faible
     @Override
     public double calcule() {
@@ -27,10 +27,10 @@ public class IMetierImpl implements IMetier {
         this.idao = idao;
     }
 
-    public IMetierImpl(IDao idao) {
+    public IMetierImpl(@Qualifier("d2") IDao idao) {
         this.idao = idao;
     }
 
-    public IMetierImpl() {
-    }
+   /* public IMetierImpl() {
+    }*/
 }

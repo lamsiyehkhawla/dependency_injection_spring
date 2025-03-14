@@ -4,6 +4,7 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
         <bean id="d" class="net.lamsiyeh.ext.DaoImpV2"></bean>
         <bean id="metier" class="net.lamsiyeh.metier.IMetierImpl">
-            <property name="idao" ref="d"></property>
+            <!-- <property name="idao" ref="d"></property>-->
+            <constructor-arg ref="d"></constructor-arg>
         </bean>
 </beans>
