@@ -1,41 +1,37 @@
-Projet Spring - Injection de dépendances
+# Projet Spring - Injection de dépendances
 
-Description
+## Description
 
 Ce projet illustre les concepts d'injection de dépendances en Java avec Spring. Il met en œuvre plusieurs manières d'injecter des dépendances :
 
-Injection par constructeur
+- **Injection par constructeur**
+- **Injection par setter**
+- **Injection avec Spring** (annotations et XML)
+- **Réflexion pour une instanciation dynamique des classes**
 
-Injection par setter
-
-Injection avec Spring (annotations et XML)
-
-Réflexion pour une instanciation dynamique des classes
-
-Structure du projet
+## Structure du projet
 
 Le projet est organisé en plusieurs packages :
 
-net.lamsiyeh.dao : Contient les classes qui représentent l'accès aux données.
+### `net.lamsiyeh.dao` : Accès aux données
+- **IDao** : Interface d'accès aux données.
+- **DaoImpl** : Implémentation accédant à une base de données.
+- **DaoImpV2** : Une autre implémentation utilisant des capteurs.
 
-IDao : Interface d'accès aux données.
+### `net.lamsiyeh.metier` : Logique métier
+- **IMetier** : Interface du métier.
+- **IMetierImpl** : Implémentation qui utilise un IDao injecté.
 
-DaoImpl : Implémentation accédant à une base de données.
+### `net.lamsiyeh.pres` : Présentation (Main)
+- **Pres** : Instanciation manuelle des dépendances.
+- **Pres2** : Instanciation dynamique via réflexion.
+- **PresSpringAnnotation** : Utilisation de Spring avec annotations.
+- **PresSpringXml** : Utilisation de Spring avec configuration XML.
 
-DaoImpV2 : Une autre implémentation utilisant des capteurs.
+## 1️⃣ Configuration avec annotations
 
-net.lamsiyeh.metier : Contient la logique métier.
+Les classes **DaoImpl**, **DaoImpV2** et **IMetierImpl** sont annotées avec `@Component`, et Spring gère l'injection automatiquement. La classe **PresSpringAnnotation.java** charge le contexte Spring.
 
-IMetier : Interface du métier.
+## Configuration XML
 
-IMetierImpl : Implémentation qui utilise un IDao injecté.
-
-net.lamsiyeh.pres : Contient les classes de présentation (main).
-
-Pres : Instanciation manuelle des dépendances.
-
-Pres2 : Instanciation dynamique via réflexion.
-
-PresSpringAnnotation : Utilisation de Spring avec annotations.
-
-PresSpringXml : Utilisation de Spring avec configuration XML.
+Un fichier **config.xml** définit les beans et leurs dépendances. La classe **PresSpringXml.java** charge cette configuration.
