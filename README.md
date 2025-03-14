@@ -34,4 +34,12 @@ Les classes **DaoImpl**, **DaoImpV2** et **IMetierImpl** sont annotées avec `@C
 
 ## Configuration XML
 
-Un fichier **config.xml** définit les beans et leurs dépendances. La classe **PresSpringXml.java** charge cette configuration.
+Un fichier **config.xml** définit les beans et leurs dépendances. 
+
+Screenshots : 
+
+<img src="captures/pic1.png">
+
+<img src="captures/pic2.png">
+
+

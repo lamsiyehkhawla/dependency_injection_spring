@@ -27,7 +27,7 @@ public class IMetierImpl implements IMetier {
         this.idao = idao;
     }
 
-    public IMetierImpl(@Qualifier("d2") IDao idao) {
+    public IMetierImpl(@Qualifier("d") IDao idao) {
         this.idao = idao;
     }
 
